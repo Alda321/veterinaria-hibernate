@@ -18,6 +18,9 @@ public class Empleado {
 
     @Column(name = "salario")
     private Double salario;
+    @ManyToOne
+    @JoinColumn(name = "departamento_id")
+    private Departamento departamento;
 
     public Empleado() {
     }
