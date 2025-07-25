@@ -63,4 +63,8 @@ public class Departamento {
         this.ubicacion = ubicacion;
         this.presuepuesto = presuepuesto;
     }
+    public void agregarEmpleados(Empleado empleado){
+        empleado.setDepartamento(this);
+        this.empleados.add(empleado);
+    }
 }

@@ -32,6 +32,22 @@ public class Empleado {
         this.salario = salario;
     }
 
+    public Empleado(long id, String nombre, LocalDate fechaIngreso, Double salario, Departamento departamento) {
+        this.id = id;
+        this.nombre = nombre;
+        this.fechaIngreso = fechaIngreso;
+        this.salario = salario;
+        this.departamento = departamento;
+    }
+
+    public Departamento getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(Departamento departamento) {
+        this.departamento = departamento;
+    }
+
     public LocalDate getFechaIngreso() {
         return fechaIngreso;
     }

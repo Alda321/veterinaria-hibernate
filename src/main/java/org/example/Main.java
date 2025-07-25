@@ -3,6 +3,7 @@ package org.example;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
+import org.example.service.DepartamentoService;
 import org.example.service.EmpleadoService;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -14,8 +15,13 @@ public class Main {
         EntityManager em = emf.createEntityManager();
 
         try{
-            EmpleadoService empleadoService = new EmpleadoService();
-            empleadoService.crearEmpleado(em);
+           // EmpleadoService empleadoService = new EmpleadoService();
+            //empleadoService.crearEmpleado(em);
+            DepartamentoService departamentoService = new DepartamentoService();
+            departamentoService.crearDepartamento(em);
+            //departamentoService.crearDepartamentoConEmpleados(em);
+
+
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
